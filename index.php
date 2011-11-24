@@ -17,9 +17,16 @@
 
 		<div id="content-main" class="content-home">			
 				<div id="content" class="content-main-body clearfix">
-					<div id="home-banner">
-						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/home_banner.png" />
-					</div>
+				<table>
+					<tr>
+						<td valign="top" style="padding-top: 60px;">
+						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/splash-screens.png" />
+						</td>
+						<td valign="top" style="vertical-align: top;padding-top: 95px;padding-left: 50px;">
+						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/splash-text.png" />
+						</td>
+					</tr>
+				</table>
 					<div id="home-modules">
 					
 						<?php dynamic_sidebar( 'home-modules' ); ?>

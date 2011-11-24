@@ -63,10 +63,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="wrapper" class="hfeed clearfix">		
-		<div id="header">
-			<h1 id="logo"><a href="<?php echo get_option( 'home' ); ?>"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/logo.jpg" alt="<?php bloginfo( 'name' ); ?>" title="<?php bloginfo( 'name' ); ?>" /></a></h1>
-			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
-			<?php wp_nav_menu( array( 'container' => '', 'menu' => 'main', 'menu_id' => 'links-main' ) ); ?>
-		</div>
+	<div id="wrapper" class="hfeed clearfix">
+	 	<table cellpadding="0" cellspacing="0" width="100%">
+	 		<tr>
+	 			<td>
+	 			<a href="<?php echo get_option( 'home' ); ?>">
+	 				<img 
+	 				src="<?php echo bloginfo( 'template_url' ); ?>/images/logo.png" 
+	 				alt="<?php bloginfo( 'name' ); ?>" 
+	 				title="<?php bloginfo( 'name' ); ?>" />
+	 			</a>
+	 			</td>
+	 			
+	 			<td align="right" style="vertical-align: top;">
+	 			<div style="padding-top: 4px;">
+<a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-twit.png"/></a>
+<a style="padding-left:4px;padding-right:4px" href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-fb.png"/></a>
+<a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-goog.png"/></a>
+				</div>
+	 				
+	 				<div style="padding-top: 34px;"> 			
+	 			<?php wp_nav_menu( array( 'container' => '', 'menu' => 'main', 'menu_id' => 'links-main' ) ); ?>
+	 			</div>
+	 			</td>
+	 		</tr>
+	 	</table>
+		
 		<div id="main" class="clearfix">	
