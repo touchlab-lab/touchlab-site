@@ -63,8 +63,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="wrapper-header">
-	 	<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 25px;">
+	<div id="wrapper" class="hfeed">
+	<table style="height: 100%; width: 100%;" cellpadding="0" cellspacing="0">
+	<tr>
+	<td style="height: 187px;">
+	<div id="wrapper-header" style="padding-bottom: 25px;">
+	 	<table cellpadding="0" cellspacing="0" width="100%">
 	 		<tr>
 	 			<td>
 	 			<a href="<?php echo get_option( 'home' ); ?>">
@@ -90,6 +94,10 @@
 	 	</table>
 	</div>
 	<div class="green-bar">&nbsp;</div>
-	<div class="gray-body">
-	<div id="wrapper" class="hfeed clearfix">
-		<div id="main" class="clearfix">	
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<div class="gray-body" style="height: 100%;position: relative;">
+	
+		<div id="main" class="clearfix" >	
