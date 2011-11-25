@@ -7,6 +7,7 @@
  * @since Touchtech 1.0
  */
 ?>		
+			</div>
 		</div>
 		<div id="footer">			
 			&copy; 2011 Touch Lab Inc.  All rights Reserved

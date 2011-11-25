@@ -63,8 +63,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="wrapper" class="hfeed clearfix">
-	 	<table cellpadding="0" cellspacing="0" width="100%">
+	<div id="wrapper-header">
+	 	<table cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 25px;">
 	 		<tr>
 	 			<td>
 	 			<a href="<?php echo get_option( 'home' ); ?>">
@@ -88,5 +88,8 @@
 	 			</td>
 	 		</tr>
 	 	</table>
-		
+	</div>
+	<div class="green-bar">&nbsp;</div>
+	<div class="gray-body">
+	<div id="wrapper" class="hfeed clearfix">
 		<div id="main" class="clearfix">	
