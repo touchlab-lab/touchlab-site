@@ -27,6 +27,20 @@ color:#333;
 background-image: url('images/pagebg.jpg');
 }
 
+#wrapper-header
+{
+text-align:left;
+margin:0 auto;
+/*background:url(images/bg.jpg) left repeat-y;*/
+position:relative;
+width:962px;
+height:100%;
+background-image: url('images/lightbg.png');
+background-position: center top;
+background-repeat: no-repeat;
+padding-top: 20px;
+}
+
 #wrapper
 {
 text-align:left;
@@ -84,3 +98,54 @@ text-decoration:none;
 color:#8DAB88
 }
 
+.home-module h2.widgettitle,.sidebar-module h2.widgettitle
+{
+display:none
+}
+
+.home-module
+{
+float: left;
+width: 300px;
+padding: 0px 10px 10px 10px;
+
+	/*display: inline !important;
+	border: 1px solid #333;
+	background-color: #ffaaaa !important;*/
+}
+
+.home-module .textwidget
+{
+	width: 300px;
+}
+
+table.home-stuff td
+{
+	padding: 10px;
+}
+
+table.home-stuff div.title
+{
+	color: #9cb550;
+	font-size: 16pt;
+	margin-bottom: 10px;
+}
+
+.home-module a{color:#333}
+.home-module
+{
+color: white;
+font-size:12px;
+}
+/*.home-module-content{overflow:hidden;width:269px;height:153px}*/
+.home-module p{display:block;padding:7px 0}
+.home-module ul{padding-top:7px}
+#home-touchtrack-img{position:absolute;bottom:9px;right:10px}
+#home-module-touchtrack p{width:175px}
+
+.green-bar
+{
+	background-image: url('images/home-green-bar.png');
+	height: 24px;
+	background-repeat: repeat-x;
+}

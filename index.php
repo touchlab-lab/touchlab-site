@@ -27,12 +27,17 @@
 						</td>
 					</tr>
 				</table>
+				<center>
+				<img 
+				style="margin-top: 30px;margin-bottom: 30px;"
+				src="<?php echo bloginfo( 'template_url' ); ?>/images/home-bar.png" />
+				
 					<div id="home-modules">
 					
 						<?php dynamic_sidebar( 'home-modules' ); ?>
 						
 					</div>
-				
+				</center>
 				</div>
 		</div>
 		
