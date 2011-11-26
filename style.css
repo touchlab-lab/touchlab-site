@@ -43,6 +43,24 @@ background-repeat: no-repeat;
 padding-top: 20px;
 }
 
+#index-header
+{
+text-align:left;
+margin:0 auto;
+/*background:url(images/bg.jpg) left repeat-y;*/
+position:relative;
+width:962px;
+
+padding-top: 20px;
+}
+
+#index-background
+{
+	background-image: url('images/lightbg.png');
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+
 /*#wrapper
 {
 	position: absolute;

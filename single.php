@@ -87,7 +87,8 @@
 
 </td>
 <td style="vertical-align: top; padding: 9px;">
-<?php the_content(); ?>
+<?php the_content(); ?><br/><br/>
+<?php the_tags('', ', ', ''); ?><br/>
 <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 </td>
 
