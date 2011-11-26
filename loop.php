@@ -19,32 +19,81 @@
  */
 ?>
 
+<?php 
+	$sidebar_header = get_post_meta($post->ID, 'sidebar-header', true);
+	$sidebar_content = get_post_meta($post->ID, 'sidebar-content', true);
+	$has_sidebar = ($sidebar_header || $sidebar_content);
+?>	
+<?php get_header() ?>
+
+<table width="100%">
+	<tr>
+		<td style="width: 225px;vertical-align: top;">
+		<?php get_template_part('sidebar') ?>	
+		</td>
+		
+		
+		
+		<td style="padding-left: 35px;">
+		<div id="content-main" style="vertical-align: top">	
+			<!-- <div class="cmc"><div class="cmt"><div class="cmb"> -->
+		<div id="content" class="clearfix">
+					
 <!-- Start the Loop. -->
- <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
- <!-- The following tests if the current post is in category 3. -->
- <!-- If it is, the div box is given the CSS class "post-cat-three". -->
- <!-- Otherwise, the div box will be given the CSS class "post". -->
- <?php if ( in_category('3') ) { ?>
-           <div class="post-cat-three">
- <?php } else { ?>
-           <div class="post">
- <?php } ?>
-
- <!-- Display the Title as a link to the Post's permalink. -->
- <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
- <!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
- <small><?php the_time('F jS, Y') ?></small>
-
- <!-- Display the Post's Content in a div box. -->
- <div class="entry">
-   <?php the_content(); ?>
- </div>
-
- <!-- Display a comma separated list of the Post's Categories. -->
- <p class="postmetadata">Posted in <?php the_category(', '); ?></p>
- </div> <!-- closes the first div box -->
+	<div class="content-main-body">
+		<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						<?php remove_filter ('the_content', 'wpautop'); ?>
+		
+		
+			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		
+			<div class="blog-banner">
+				<div class="left"></div>
+				<div class="right"></div>
+				<div><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a><br/>
+				<span style="font-size:9pt;margin-top: 3px;display: inline-block;"><?php blog_posted_on(); ?>, posted in: <?php the_category(', ') ?></span>
+				</div>
+			</div>	
+		
+			<table>
+				<tr>
+					<td style="vertical-align: top; padding: 9px; width: 152px;">
+					<?php if ( get_the_author() ) : // If a user has filled out their description, show a bio on their entries  ?>
+										<div class="entry-author-info">
+											
+											<div class="author-avatar">
+												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
+												<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 150 ) ); ?>
+												</a>
+											</div>
+											
+											<div class="author-description">
+												<div class="title">Author</div>
+												<div class="name">
+												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo(get_the_author()) ?></a>
+												</div>
+												<div class="description">
+												<?php the_author_meta( 'description' ); ?>
+												</div>
+											</div>
+											
+										</div>
+					<?php endif; ?>
+					
+					</td>
+					<td style="vertical-align: top; padding: 9px;">
+					<?php the_content_limit(1000, "More &raquo;"); ?>
+					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
+					</td>
+				
+				</tr>
+			</table>
+		
+		
+			</div>
+		</div>
+	</div>
 
  <!-- Stop The Loop (but note the "else:" - see next line). -->
  <?php endwhile; else: ?>
@@ -55,4 +104,18 @@
 
  <!-- REALLY stop The Loop. -->
  <?php endif; ?>
+ 
+ 						
+ 						
+ 						
+ 						
+ 				
+ 					</div>
+ 				<!-- </div></div></div> -->
+ 			</div>
+ 		</td>
+ 	</tr>
+ </table>
+ 
+ <?php get_footer() ?>
 

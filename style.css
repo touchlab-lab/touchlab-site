@@ -190,7 +190,7 @@ color: #99c03b;
 .green-title-left
 {
 	color: #99c03b;
-	font-size: 22pt;
+	font-size: 18pt;
 /*	font-family: "Open Sans Light";*/
 
 }
@@ -208,7 +208,14 @@ border: 1px solid #575758;
 background-color: #f1f2f2;
 box-shadow: 0px 0px 4px #222;
 padding: 15px;
+margin-bottom: 30px;
 }
+
+.content-main-body a
+{
+	color: #739520;
+}
+
 
 .content-banner
 {
@@ -261,7 +268,21 @@ padding: 15px;
 	background-image: url('images/blog-banner.png');
 	background-repeat: repeat-x;
 	height: 72px;
+	margin-bottom: 3px;
+}
 
+.blog-banner a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+/*	border-bottom: 1px white dotted;*/
+}
+
+.blog-banner a:hover
+{
+	text-decoration: underline;
+	border-bottom: 0;
 }
 
 .blog-banner div
@@ -335,4 +356,37 @@ padding: 15px;
 .sep-bar
 {
 	border-top: 1px solid #454646;
+}
+
+.author-avatar
+{
+	text-align: center;
+}
+
+.author-avatar .avatar
+{
+	border: 1px solid #c7c8ca;
+}
+
+.author-description div
+{
+	margin-top: 10px;
+}
+
+.author-description .title
+{
+	font-weight: bold;
+}
+
+.author-description .name a
+{
+	color: #739520;
+	font-size: 11pt;
+}
+
+.author-description .description 
+{
+	color: #999;
+	font-size: 9pt;
+	font-style: italic;
 }

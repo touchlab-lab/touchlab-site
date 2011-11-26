@@ -8,7 +8,11 @@
  */
 ?>
 <div class="green-title-left">
-<?php wp_title("", true) ?>
+<?php if($page_title) : ?>
+	<?php echo $page_title ?>
+<?php else : ?>
+	<?php wp_title("", true) ?>
+<?php endif; ?>
 </div>
 <div style="margin-top: 10px;margin-bottom: 25px;" class="white-body-left">
 <?php echo get_post_meta($post->ID, 'sub_title', true); ?>

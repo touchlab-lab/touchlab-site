@@ -22,7 +22,6 @@
  */
 ?>
 <?php 
-	$page_title = "Blog";
 	$sidebar_header = get_post_meta($post->ID, 'sidebar-header', true);
 	$sidebar_content = get_post_meta($post->ID, 'sidebar-content', true);
 	$has_sidebar = ($sidebar_header || $sidebar_content);
@@ -54,7 +53,7 @@
 				<div class="blog-banner">
 				<div class="left"></div>
 				<div class="right"></div>
-				<div><?php the_title(); ?><br/>
+				<div>Blog &gt; <?php the_title(); ?><br/>
 				<span style="font-size:9pt;margin-top: 3px;display: inline-block;"><?php blog_posted_on(); ?>, posted in: <?php the_category(', ') ?></span>
 				</div>
 				
@@ -67,9 +66,7 @@
 					<div class="entry-author-info">
 						
 						<div class="author-avatar">
-							<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 150 ) ); ?>
-							</a>
 						</div>
 						
 						<div class="author-description">

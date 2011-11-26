@@ -110,14 +110,15 @@ if ( ! function_exists( 'blog_posted_on' ) ) :
  * @since Twenty Eleven 1.0
  */
 function blog_posted_on() {
-	printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%3$s" title="%4$s" rel="author">%5$s</a></span></span>', 'twentyeleven' ),
+	printf( __( '<time class="entry-date" datetime="%1$s" pubdate>%2$s</time>', 'twentyeleven' ),
 //		esc_url( get_permalink() ),
 //		esc_attr( get_the_time() ),
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date() ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		sprintf( esc_attr__( 'View all posts by %s', 'twentyeleven' ), get_the_author() ),
-		esc_html( get_the_author() )
+		esc_html( get_the_date() )
+//		,
+//		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+//		sprintf( esc_attr__( 'View all posts by %s', 'twentyeleven' ), get_the_author() ),
+//		esc_html( get_the_author() )
 	);
 }
 endif;
