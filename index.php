@@ -84,12 +84,15 @@
 	 			<td align="right" style="vertical-align: top;">
 	 			<div style="padding-top: 4px;">
 <a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-twit.png"/></a>
-<a style="padding-left:4px;padding-right:4px" href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-fb.png"/></a>
-<a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-goog.png"/></a>
+<a style="padding-left:4px;padding-right:4px" href="http://www.facebook.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-fb.png"/></a>
+<a href="https://plus.google.com/109650491912369781696/posts"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-goog.png"/></a>
 				</div>
 	 				
 	 				<div style="padding-top: 34px;"> 			
 	 			<?php wp_nav_menu( array( 'container' => '', 'menu' => 'main', 'menu_id' => 'links-main' ) ); ?>
+	 			<ul class="menu">
+	 			 <li class="menu-item menu-item-type-post_type menu-item-object-page<?php if (  is_single() || is_search() || is_archive() ) { echo ' current_page_item'; } ?>"><a href="/category/blog/">Blog</a></li>
+	 			</ul>
 	 			</div>
 	 			</td>
 	 		</tr>
@@ -109,8 +112,18 @@
 						<td valign="top" style="padding-top: 1px;">
 						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/splash-screens.png" />
 						</td>
+						
 						<td valign="top" style="vertical-align: top;padding-top: 45px;padding-left: 50px;">
-						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/splash-text.png" />
+						
+						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/home_title.png" />
+						<div style="color: #f1f2f2;font-size: 11pt;margin-right: 80px;margin-bottom: 26px;margin-top: 6px;">
+						Touch Lab builds Android Apps. Period. Focus means quality. We zig where others zag. We're the yin to their yang. You get it. Click the button.
+						</div>
+						
+						<a href="/services/">
+						<img src="<?php echo bloginfo( 'template_url' ); ?>/images/home_button.png" />
+						</a>
+						
 						</td>
 					</tr>
 				</table>

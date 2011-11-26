@@ -36,9 +36,9 @@
 
 	?></title>
 
-<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans&v1' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans&v1' rel='stylesheet' type='text/css'/>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:bold&v1' rel='stylesheet' type='text/css'/>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:light&v1' rel='stylesheet' type='text/css'/>-->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:light&v1' rel='stylesheet' type='text/css'/>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -84,12 +84,17 @@
 	 			<td align="right" style="vertical-align: top;">
 	 			<div style="padding-top: 4px;">
 <a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-twit.png"/></a>
-<a style="padding-left:4px;padding-right:4px" href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-fb.png"/></a>
-<a href="http://www.twitter.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-goog.png"/></a>
+<a style="padding-left:4px;padding-right:4px" href="http://www.facebook.com/touchlabny"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-fb.png"/></a>
+<a href="https://plus.google.com/109650491912369781696/posts"><img src="<?php echo bloginfo( 'template_url' ); ?>/images/soci-goog.png"/></a>
 				</div>
 	 				
 	 				<div style="padding-top: 34px;"> 			
-	 			<?php wp_nav_menu( array( 'container' => '', 'menu' => 'main', 'menu_id' => 'links-main' ) ); ?>
+	 			<?php wp_nav_menu( array( 'container' => fbsql_affected_rows, 'menu' => 'main', 'menu_id' => 'links-main' ) ); ?>
+	 			
+	 			<ul class="menu">
+	 			 <li class="menu-item menu-item-type-post_type menu-item-object-page<?php if ( is_home() || is_single() || is_search() || is_archive() ) { echo ' current_page_item'; } ?>"><a href="/category/blog/">Blog</a></li>
+	 			</ul>
+
 	 			</div>
 	 			</td>
 	 		</tr>

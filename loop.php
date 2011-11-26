@@ -43,7 +43,7 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<div class="content-main-body">
-		<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						<?php remove_filter ('the_content', 'wpautop'); ?>
+		<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						
 		
 		
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

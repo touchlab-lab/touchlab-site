@@ -42,7 +42,7 @@
 			<!-- <div class="cmc"><div class="cmt"><div class="cmb"> -->
 				<div id="content" class="content-main-body clearfix">
 					
-					<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						<?php remove_filter ('the_content', 'wpautop'); ?>
+					<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						
 
 
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
