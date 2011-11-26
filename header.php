@@ -36,7 +36,9 @@
 
 	?></title>
 
-
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans&v1' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:bold&v1' rel='stylesheet' type='text/css'/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:light&v1' rel='stylesheet' type='text/css'/>-->
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -97,7 +99,5 @@
 	</td>
 	</tr>
 	<tr>
-	<td>
-	<div class="gray-body" style="height: 100%;position: relative;">
-	
+	<td class="gray-body">
 		<div id="main" class="clearfix" >	

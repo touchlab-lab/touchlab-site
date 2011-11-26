@@ -18,19 +18,15 @@
 	$has_sidebar = ($sidebar_header || $sidebar_content);
 ?>
 <?php get_header() ?>
+
 		<table width="100%">
 			<tr>
 				<td style="width: 225px;vertical-align: top;">
-				<div class="green-title-left">
-				<?php wp_title("", true) ?>
-				</div>
-				<div style="margin-top: 10px;" class="white-body-left">
-				<?php echo get_post_meta($post->ID, 'sub_title', true); ?>
-				</div>
+				<?php get_template_part('sidebar-page') ?>	
 				</td>
-				<td>
+				<td style="padding-left: 15px;">
 				<div id="content-main" style="vertical-align: top">	
-					<div class="cmc"><div class="cmt"><div class="cmb">			
+					<!-- <div class="cmc"><div class="cmt"><div class="cmb"> -->
 						<div id="content" class="content-main-body clearfix">
 							
 							<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						<?php remove_filter ('the_content', 'wpautop'); ?>
@@ -39,26 +35,14 @@
 													<?php endwhile; ?>
 								</div>
 								
-								<?php if($has_sidebar): ?>
-									<div class="content-sidebar">
-									<?php if($sidebar_header): ?>
-										<div class="content-sidebar-header"><?php echo $sidebar_header ?></div>
-									<?php endif; ?>
-									<?php if($sidebar_content): ?>
-										<div class="content-sidebar-content">
-										<?php echo $sidebar_content ?>
-										</div>
-									<?php endif; ?>
-									</div>
-								<?php endif; ?>
-							
+								
+								
 						
 							</div>
-						</div></div></div>
+						<!-- </div></div></div> -->
 					</div>
 				</td>
 			</tr>
 		</table>
-		<?php get_template_part('sidebar') ?>	
 		
 <?php get_footer() ?>	

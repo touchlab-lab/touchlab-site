@@ -22,7 +22,7 @@ Tags:
 body
 {
 text-align:center;
-font:normal 13px arial, tahoma, sans-serif;
+font:normal 13px arial, sans/*"Open Sans"*/;
 color:#333;
 background-image: url('images/pagebg.jpg');
 padding: 0px;
@@ -101,7 +101,7 @@ text-decoration:none;
 color:#8DAB88
 }
 
-.home-module h2.widgettitle,.sidebar-module h2.widgettitle
+.home-module h2.widgettitle
 {
 display:none
 }
@@ -146,6 +146,35 @@ font-size:12px;
 #home-touchtrack-img{position:absolute;bottom:9px;right:10px}
 #home-module-touchtrack p{width:175px}
 
+.sidebar-module h2.widgettitle
+{
+	color: white;
+	font-weight: bold;
+	font-size: 16pt;
+}
+
+.sidebar-module ul
+{
+	border-top: 1px solid #636466;
+	padding-left: 0;
+	margin-top: 10px;
+	margin-left: 0;
+	list-style-type: none;
+}
+
+.sidebar-module ul li
+{
+	border-bottom: 1px solid #636466;
+	color: 99c03b;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sidebar-module ul li a
+{
+color: #99c03b;
+}
+
 .green-bar
 {
 	background-image: url('images/home-green-bar.png');
@@ -162,7 +191,8 @@ font-size:12px;
 {
 	color: #99c03b;
 	font-size: 22pt;
-	font-weight: normal;
+/*	font-family: "Open Sans Light";*/
+
 }
 
 .white-body-left
@@ -226,6 +256,54 @@ padding: 15px;
 /*	display: inline-block;*/
 }
 
+.blog-banner
+{
+	background-image: url('images/blog-banner.png');
+	background-repeat: repeat-x;
+	height: 72px;
+
+}
+
+.blog-banner div
+{
+	position: relative;
+	top: 13px;
+	left: -27px;
+	color: white;
+	font-size: 16pt;
+	text-align: left;
+}
+
+.blog-banner .left
+{
+	background-image: url('images/blog-banner-left.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 72px;
+	width: 27px;
+	left: -27px;
+	top: 0px;
+	position: relative;
+	float: left;
+	font-size: 16pt;
+/*		display: inline-block;*/
+}
+
+.blog-banner .right
+{
+	background-image: url('images/blog-banner-right.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 72px;
+	width: 27px;
+	left: 27px;
+	top: 0px;
+	float: right;
+	position: relative;
+	font-size: 16pt;
+/*	display: inline-block;*/
+}
+
 #footer 
 {
 	margin: 0;
@@ -238,4 +316,23 @@ padding: 15px;
 	vertical-align: top;
 	background-image: url('images/footer-bg.png');
 	background-repeat: repeat-x;
+}
+
+.green-title
+{
+	font-size:16pt;
+/*font-family: "Open Sans Bold";*/
+	color:#5f8515;
+}
+
+.gray-title
+{
+	font-size:16pt;
+	font-weight:bold;
+	color:#636466;
+}
+
+.sep-bar
+{
+	border-top: 1px solid #454646;
 }

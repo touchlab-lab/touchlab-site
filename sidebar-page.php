@@ -10,13 +10,7 @@
 <div class="green-title-left">
 <?php wp_title("", true) ?>
 </div>
-<div style="margin-top: 10px;margin-bottom: 25px;" class="white-body-left">
+<div style="margin-top: 10px;" class="white-body-left">
 <?php echo get_post_meta($post->ID, 'sub_title', true); ?>
 </div>
-<div id="sidebar">
-	<div id="sidebar-modules">
-	
-		<?php dynamic_sidebar( 'sidebar-modules' ); ?>
-		
-	</div>
-</div>
+

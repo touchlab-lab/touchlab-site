@@ -21,18 +21,44 @@
  * @since Touchtech 1.0
  */
 ?>
+<?php 
+	$sidebar_header = get_post_meta($post->ID, 'sidebar-header', true);
+	$sidebar_content = get_post_meta($post->ID, 'sidebar-content', true);
+	$has_sidebar = ($sidebar_header || $sidebar_content);
+?>	
 <?php get_header() ?>
+
+<table width="100%">
+	<tr>
+		<td style="width: 225px;vertical-align: top;">
 		<?php get_template_part('sidebar') ?>	
-		<div id="content-main">	
-			<div class="cmc"><div class="cmt"><div class="cmb">			
+		</td>
+		
+		
+		
+		<td style="padding-left: 35px;">
+		<div id="content-main" style="vertical-align: top">	
+			<!-- <div class="cmc"><div class="cmt"><div class="cmb"> -->
 				<div id="content" class="content-main-body clearfix">
-					<div class="content-col-main">	
-					<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					
+					<div class="content-col-main <?php if($has_sidebar): ?>compressed<?php endif; ?>">						<?php remove_filter ('the_content', 'wpautop'); ?>
+
+
+<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
 				
 
 				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h2><?php the_title(); ?></h2>
+				
+				<div class="blog-banner">
+				<div class="left"></div>
+				<div class="right"></div>
+				<div><?php the_title(); ?><br/>
+				<span style="font-size:9pt;margin-top: 3px;display: inline-block;"><?php blog_posted_on(); ?>, posted in: <?php the_category(', ') ?></span>
+				</div>
+				
+				</div>
+					
 
 
 					<div class="entry-content">
@@ -67,8 +93,19 @@
 				<?php comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
-				</div>
-				</div>
-			</div></div></div>
-		</div>
+
+
+
+						</div>
+						
+						
+						
+				
+					</div>
+				<!-- </div></div></div> -->
+			</div>
+		</td>
+	</tr>
+</table>
+
 <?php get_footer() ?>	
